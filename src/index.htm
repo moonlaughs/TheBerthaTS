@@ -4,14 +4,25 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>The Bertha Project</title>
   <link rel="stylesheet" type="text/css" href="bundle.css">
+  <style>
+    mark {
+      background-color: black;
+      color:lavender;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Webpack - TypeScript - Scss</h1>
-  <h2>TypeScript Hello World</h2>  
-  <div id="content"></div>
+  <h1 style="color: blueviolet">Bertha project</h1>
+  <h2><mark>Show all the users</mark></h2>  
+  <div id="output"></div>
+  <button id="showAllUsersButton">Show all the users</button>
   
-    
+  <h2><mark>Show a user by id</mark></h2>
+  <input id="selInput" placeholder="Type user's id"/>
+  <button id="showSelectedUser">Show me user</button>
+  <div id="selOutput"></div>
+  
   <script src="bundle.js"></script>
 </body>
 </html>
