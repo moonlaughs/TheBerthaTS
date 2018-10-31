@@ -66,6 +66,11 @@ function showUser(): void {
          else {selOutput.innerHTML = error;}
     })
 }
+<<<<<<< HEAD
+=======
+let user: Person = { firstName: "John", lastName: "Doe" };
+let user2: Person = { firstName: "Megante", lastName: "Stepnoja"};
+>>>>>>> c565ab11f308b1cd21c7b4aecf4e6b7bcc440c71
 
 let showSelectedUsersHealthDataButton : HTMLButtonElement = <HTMLButtonElement> document.getElementById("showSelectedUsersHealthData");
 showSelectedUsersHealthDataButton.addEventListener("click", showSelUserHealthData);
