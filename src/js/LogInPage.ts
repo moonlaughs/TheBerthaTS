@@ -4,4 +4,4 @@ import axios,
     AxiosError
 } from "../../node_modules/axios";
 
-let usernameInput: HTMLDivElement = <HTMLDivElement>document.getElementById
+let usernameInput: HTMLDivElement = <HTMLDivElement>document.getElementById("username");
