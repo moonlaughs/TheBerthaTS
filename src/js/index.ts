@@ -28,7 +28,7 @@ let showallUsersButton: HTMLButtonElement = <HTMLButtonElement> document.getElem
 showallUsersButton.addEventListener("click", showAllUsers);
 
 function showAllUsers(): void {
-    let uri: string = "http://localhost:65403/api/users";
+    let uri: string = "https://thebertharestconsumer20181031102055.azurewebsites.net/api/users";
     axios.get<IUser[]>(uri)
     .then(function(response:AxiosResponse<IUser[]>): void {
         let result: string = "<ol>";
@@ -52,7 +52,7 @@ function showUser(): void {
     let selOutput: HTMLDivElement = <HTMLDivElement> document.getElementById("selOutput");
     let selInput : HTMLInputElement = <HTMLInputElement> document. getElementById("selInput");
     let id: string = selInput.value;
-    let uri: string = "http://localhost:65403/api/users/" + id;
+    let uri: string = "https://thebertharestconsumer20181031102055.azurewebsites.net/api/users" + id;
     axios.get<IUser>(uri)
     .then(function (response: AxiosResponse<IUser>): void {
         console.log(response.data);
@@ -74,7 +74,7 @@ function showSelUserHealthData() : void {
     let healthDataInput : HTMLInputElement = <HTMLInputElement> document.getElementById("healthDataInput");
     let healthDataOutput : HTMLOutputElement = <HTMLOutputElement> document.getElementById("healthDataOutput");
     let id: string = healthDataInput.value;
-    let uri: string = "http://localhost:65403/api/users/" + id + "/health";
+    let uri: string = "https://thebertharestconsumer20181031102055.azurewebsites.net/api/users" + id + "/health";
     axios.get<IHealth>(uri)
     .then(function(response:AxiosResponse<IHealth[]>): void {
         let result: string = "<table><tr><th>Id</th><th>Blood pressure upper</th><th>Blood pressure down</th><th>Hearth rate</th><th>Temperature</th><th>Date</th>" 
