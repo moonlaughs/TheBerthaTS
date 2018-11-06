@@ -18,10 +18,15 @@ loginButton.addEventListener("click", login);
 function login(): void
 {
     let uri:string= "https://thebertharestconsumer20181031102055.azurewebsites.net/api/users";
-    Axios.get<IUser[]>(uri)
-    .then(function(response:AxiosResponse) :void
+    axios.get<IUser[]>(uri)
+    .then(function(response:AxiosResponse<IUser[]>) :void
     {
         console.log(response.data);
-        let result: 
+        //let result: 
+        response.data.forEach((user: IUser) => {
+            if (user.username !== null && user.username === usernameInput.toString()){
+                                
+            }            
+        });
     })
 }
