@@ -11,7 +11,8 @@ module.exports = {
   // which files should webpack watch and transpile
   entry: {
     LogInPage: './src/js/LogInPage.ts',
-    index: './src/js/index.ts'
+    index: './src/js/index.ts',
+    EnvironmentData: './src/js/EnvironmentData.ts'
   },
   module: {
     // rules webpack should follow when watching...
