@@ -31,6 +31,29 @@ interface IEnvironment{
     dateTimeInfo: Date;
 }
 
+let allButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("allButton");
+allButton.addEventListener("click", getAllEnv);
+
+function getAllEnv(): void{
+    let envOutput2: HTMLDivElement = <HTMLDivElement>document.getElementById("envOutput2");
+    let uri: string = "https://thebertharestconsumer20181031102055.azurewebsites.net/api/environment"; 
+
+    axios.get<IEnvironment>(uri)
+    .then(function (response: AxiosResponse<IEnvironment[]>): void{
+        let result: string = "<table><tr><th>Id</th><th>Oxygen</th><th>Co2</th><th>Co</th><th>Pm25</th><th>Pm10</th><th>Ozon</th><th>Dust Particles</th><th>Nitrogen Dioxide</th><th>Sulphur Dioxide</th><th>Longitute</th><th>Latitute</th><th>User Id</th><th>Date</th>" 
+             response.data.forEach((envD: IEnvironment) => {
+            result += "<tr><td>" + envD.id + "</td><td>" + envD.oxygen + "</td><td>" + envD.co2 + "</td><td>" + envD.co + "</td><td>" + envD.pm25 + "</td><td>" + envD.pm10 + "</td><td>" + envD.ozon + "</td><td>" + envD.dustParticles + "</td><td>" + envD.nitrogenDioxide + "</td><td>" + envD.sulphurDioxide + "</td><td>" + envD.longitude + "</td><td>" + envD.latitude + "</td><td>" + envD.userId + "</td><td>" + envD.dateTimeInfo + "</td></tr>"
+        });
+        result += "</table>"
+        envOutput2.innerHTML = result;
+    })
+    .catch (function (error: AxiosError): void {
+        if (error.response) {
+            envOutput2.innerHTML = error;}
+        else {envOutput2.innerHTML = error;}
+   })
+}
+
 let getAllButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("getAllButton");
 getAllButton.addEventListener("click", getEnvData);
 
@@ -68,7 +91,6 @@ let addSDInput: HTMLInputElement = <HTMLInputElement>document.getElementById("ad
 let addLonInput: HTMLInputElement = <HTMLInputElement>document.getElementById("addLonInput");
 let addLanInput: HTMLInputElement = <HTMLInputElement>document.getElementById("addLanInput");
 let addUIInput: HTMLInputElement = <HTMLInputElement>document.getElementById("addUIInput");
-// let addDateInput: HTMLInputElement = <HTMLInputElement>document.getElementById("addDate");
 
 let envOutput: HTMLDivElement = <HTMLDivElement>document.getElementById("envOutput");
 
