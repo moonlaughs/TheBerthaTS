@@ -12,7 +12,7 @@ module.exports = {
   entry: {
     LogInPage: './src/js/LogInPage.ts',
     index: './src/js/index.ts'
-  },//['./src/index.htm', './src/scss/styles.scss', './src/js/index.ts', './src/LogInPage.html'],
+  },
   module: {
     // rules webpack should follow when watching...
     rules: [
@@ -71,7 +71,7 @@ module.exports = {
       reload: true,
       port: 3000,
       files: ["*.htm", "*.html", "scss/*.*"],
-      index: 'index.htm',
+      index: 'LogInPage.html',
       server: { baseDir: ['dist'] }
     })
   ]
