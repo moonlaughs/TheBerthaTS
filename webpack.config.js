@@ -12,7 +12,7 @@ module.exports = {
   entry: {
     LogInPage: './src/js/LogInPage.ts',
     index: './src/js/index.ts',
-    EnvironmentData: './src/js/EnvironmentData.ts'
+    EnvironmentPage: './src/js/EnvironmentData.ts'
   },
   module: {
     // rules webpack should follow when watching...
@@ -72,7 +72,7 @@ module.exports = {
       reload: true,
       port: 3000,
       files: ["*.htm", "*.html", "scss/*.*"],
-      index: 'LogInPage.html',
+      index: 'EnvironmentPage.html',
       server: { baseDir: ['dist'] }
     })
   ]
