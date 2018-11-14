@@ -33,11 +33,10 @@ function login(): void {
     axios.get(uri)
         .then(function (response: AxiosResponse): void {
             console.log(response.data);
-            if (response.data === true) {
-                window.location.href = 'http://localhost:3000/index.htm';
-            }
-            else {
-                alert("Wrong cridentials")
+            if(response.data === true){
+            window.location.href = 'http://localhost:3000/index.htm';}
+            else{
+                alert("Wrong credentials")
             }
         })
         .catch(function (error: AxiosError): void {
