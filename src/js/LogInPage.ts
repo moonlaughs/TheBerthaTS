@@ -4,9 +4,7 @@ import axios,
     AxiosError
 } from "../../node_modules/axios";
 
-<<<<<<< HEAD
-let usernameInput: HTMLDivElement = <HTMLDivElement>document.getElementById("username");
-=======
+
 interface IUser {
     id: number;
     firstName: string;
