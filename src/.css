@@ -1,24 +1,20 @@
-/*$fontColor: #0091aa;
-$colorHeading: #be4a14;
-#content  // div with id: content
-{
-    color: $fontColor;
-}
 
-h2
+p
 {
-    color: $colorHeading;
-}
+    border:1px darkslategrey;
+    padding: 70px;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 
-h1{
-    @extend h2;
-}*/
+
+}
 body
 {
+    padding: 170px;
     background-image: url("http://systemcall.info/wp-content/uploads/2012/09/blurred-1600x900-blue-stock-hd-9710.jpg");
     background-attachment: center;
     text-align:center;
-    color:lavender;
     
 }
 p
@@ -58,8 +54,4 @@ h1
      border: #071019;
      opacity: 0.5;
      padding: 5px;
- }
- mark
- {
-
  }
