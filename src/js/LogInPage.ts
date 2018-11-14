@@ -11,9 +11,6 @@ import {
     ParallelEnumerable*/
 } from "linq-to-typescript";
 
-//import {Router} from '@angular/router';
-
-
 interface IUser {
     id: number;
     firstName: string;
@@ -36,11 +33,11 @@ function login(): void {
     axios.get(uri)
         .then(function (response: AxiosResponse): void {
             console.log(response.data);
-            //if (response.data === true){            }
-            //link.href == "index.html";
-            //this.router.navigate(['http://localhost:3000/index.html']);
-            //this.router= Router;
-            //this.router.navigateByUrl('/index.html');}
+            if(response.data === true){
+            window.location.href = 'http://localhost:3000/index.htm';}
+            else{
+                alert("Wrong cridentials")
+            }
         })
         .catch(function (error: AxiosError): void {
             console.log(error);
