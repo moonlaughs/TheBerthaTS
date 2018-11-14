@@ -1,4 +1,4 @@
-/*
+  /*
   A webpack configuration file designed
   for webdevelopment with typescript and scss
   by Ebbe Vang, evang.dk
